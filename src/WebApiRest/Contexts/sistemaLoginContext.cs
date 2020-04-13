@@ -1,8 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using WebApiRest.Models;
 
-namespace WebApiRest.Models
+namespace WebApiRest.Contexts
 {
     public partial class sistemaLoginContext : DbContext
     {
@@ -28,7 +29,6 @@ namespace WebApiRest.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source=VALK2-PC\\SQLEXPRESS01; Initial Catalog=sistemaLogin;Integrated Security=True");
             }
         }
