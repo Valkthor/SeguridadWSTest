@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WebApiRest2.Handlers;
 using WebApiRest2.Models;
 
 namespace WebApiRest2
@@ -28,6 +30,10 @@ namespace WebApiRest2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddAuthentication("BasicAuthentication")
+                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+
             services.AddDbContext<sistemaLoginContext>(optiones =>
                 optiones.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
@@ -44,6 +50,8 @@ namespace WebApiRest2
 
             app.UseRouting();
 
+            //se agrega el uso de la autenticacion
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
