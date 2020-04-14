@@ -10,7 +10,7 @@ namespace WebApiRest2.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UsuariosController : ControllerBase
+    public class UsoSimpleEFController : ControllerBase
     {
 
 
@@ -38,7 +38,7 @@ namespace WebApiRest2.Controllers
                 //context.SaveChanges();
 
                 // == PARA ELIMINAR ==
-                TablaUsuarios tbusuarios = context.TablaUsuarios.Where(tablaUsuarios => tablaUsuarios.IdPruenbas == 7).FirstOrDefault();
+                TablaUsuarios tbusuarios = context.TablaUsuarios.Where(tablaUsuarios => tablaUsuarios.IdIntegracionAdministracion == 7).FirstOrDefault();
                 context.TablaUsuarios.Remove(tbusuarios);
                 context.SaveChanges();
 

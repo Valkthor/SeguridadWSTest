@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiRest", "WebApiRest\WebApiRest.csproj", "{66EDE228-A7B7-45AF-B81D-BB431E12EC6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiRest2", "WebApiRest2\WebApiRest2.csproj", "{DD39D3C8-0C07-4F57-8348-4AC58435A4B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiRest2", "WebApiRest2\WebApiRest2.csproj", "{DD39D3C8-0C07-4F57-8348-4AC58435A4B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorrarDespuesDeterminar", "BorrarDespuesDeterminar\BorrarDespuesDeterminar.csproj", "{64ED9037-589C-4ACF-B88E-BA4F024AB162}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DD39D3C8-0C07-4F57-8348-4AC58435A4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD39D3C8-0C07-4F57-8348-4AC58435A4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD39D3C8-0C07-4F57-8348-4AC58435A4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64ED9037-589C-4ACF-B88E-BA4F024AB162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64ED9037-589C-4ACF-B88E-BA4F024AB162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64ED9037-589C-4ACF-B88E-BA4F024AB162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64ED9037-589C-4ACF-B88E-BA4F024AB162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
